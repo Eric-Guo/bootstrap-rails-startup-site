@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": [".bundle",".idea","tmp","images"]
+		}
+	],
+    "settings":
+    {
+        "tab_size": 2
+    }
+}

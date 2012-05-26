@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap Project Startup Site</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Project name</a>
+          <div class="btn-group pull-right">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-user"></i> Username
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </div>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+<% if Rails.env == 'development' and request.host == 'localhost' %>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reference Document <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+<li><a href="http://guides.rubyonrails.org/" target="_black">Rails Guides</a></li>
+<li><a href="http://api.rubyonrails.org/" target="_black">Rails API</a></li>
+<li><a href="http://www.ruby-doc.org/core/" target="_black">Ruby core</a></li>
+<li><a href="http://www.ruby-doc.org/stdlib/" target="_black">Ruby standard library</a></li>
+<li><a href="http://twitter.github.com/bootstrap/components.html" target="_black">Bootstrap reference</a></li>
+                </ul>
+              </li>
+<% end %>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+      <%= yield %>
+      </div><!--/row-->
+      <hr>
+      <footer>
+        <p>&copy; Company 2012</p>
+      </footer>
+    </div><!--/.fluid-container-->
+
+</body>
+</html>

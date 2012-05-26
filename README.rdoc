@@ -1,9 +1,10 @@
 == Welcome to Bootstrap Project Startup Site
-  1. using Sass template
-  2. using ruby.taobao.org in Gemfile
-  3. add win32console for more beautiful out in Windows
-  4. config.assets.debug = false in config/environments/development.rb to focus function at first
-  5. Add developer document reference
+1. using Sass template
+2. using ruby.taobao.org in Gemfile
+3. add win32console for more beautiful out in Windows
+4. config.assets.debug = false in config/environments/development.rb to focus function at first
+5. add developer document reference
+6. default Sublime Text 2 project
 
 == Welcome to Rails
 

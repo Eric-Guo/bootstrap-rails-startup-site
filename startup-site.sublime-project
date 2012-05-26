@@ -1,0 +1,14 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": [".bundle",".idea","tmp","images"],
+			"file_exclude_patterns": ["*.sublime-workspace"]
+		}
+	],
+    "settings":
+    {
+        "tab_size": 2
+    }
+}

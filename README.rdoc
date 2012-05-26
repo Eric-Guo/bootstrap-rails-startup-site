@@ -1,10 +1,19 @@
-== Welcome to Bootstrap Project Startup Site
-1. using Sass template
+== Welcome to use Bootstrap Rails Startup Site
+I created this startup site focus on the general enterprise internal website, which frontend code seldom to change, but logic/model changed frequently. I'm using Windows when develop rails, but I found most of the gems about Bootstrap theme need therubyracer Gems, so can not used if you develop Rails under Windows. So here is my solution :-)
+
+
+== The job which already do for you
+1. using Sass based Bootstrap template
 2. using ruby.taobao.org in Gemfile
 3. add win32console for more beautiful out in Windows
 4. config.assets.debug = false in config/environments/development.rb to focus function at first
 5. add developer document reference
 6. default Sublime Text 2 project
+
+== The job after you clone this site
+1. bundle install
+2. rake assets:precompile (this will give you very clean log out windows)
+3. rails server
 
 == Welcome to Rails
 

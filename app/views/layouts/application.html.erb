@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bootstrap Project Startup Site</title>
+  <title>Bootstrap-Rails Startup Site</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -14,50 +14,61 @@
   <![endif]-->
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container-fluid">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="#">Enterprise Project Site</a>
+        <div class="btn-group pull-right">
+<% if user_signed_in? %>
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="icon-user"></i> <%= current_user.badge %>
+            <span class="caret"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
-          <div class="btn-group pull-right">
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <i class="icon-user"></i> Username
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Profile</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Sign Out</a></li>
-            </ul>
-          </div>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Profile', edit_user_registration_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+          </ul>
+<% else %>
+          <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+            <i class="icon-minus-sign"></i> Guest
+            <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Sign In', new_user_session_path %></li>
+            <li class="divider"></li>
+            <li><%= link_to 'Register', new_user_registration_path %></li>
+          </ul>
+<% end %>
+        </div>
+        <div class="nav-collapse">
+          <ul class="nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
 <% if Rails.env == 'development' and request.host == 'localhost' %>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reference Document <b class="caret"></b></a>
-                <ul class="dropdown-menu">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reference Document <b class="caret"></b></a>
+              <ul class="dropdown-menu">
 <li><a href="http://guides.rubyonrails.org/" target="_black">Rails Guides</a></li>
 <li><a href="http://api.rubyonrails.org/" target="_black">Rails API</a></li>
 <li><a href="http://www.ruby-doc.org/core/" target="_black">Ruby core</a></li>
 <li><a href="http://www.ruby-doc.org/stdlib/" target="_black">Ruby standard library</a></li>
 <li><a href="http://apidock.com/rails" target="_black">Rails API dock</a></li>
 <li><a href="http://twitter.github.com/bootstrap/components.html" target="_black">Bootstrap reference</a></li>
-                </ul>
-              </li>
+              </ul>
+            </li>
 <% end %>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
+  </div>
     <div class="container">
       <div class="row">
       <% if notice.present? %>
@@ -79,14 +90,11 @@
       </div><!--/row-->
     </div><!--/.container-->
     <div class="container-fluid">
-      <div class="row-fluid">
       <%= yield %>
-      </div><!--/row-->
       <hr>
       <footer>
         <p>&copy; Company 2012</p>
       </footer>
     </div><!--/.fluid-container-->
-
 </body>
 </html>

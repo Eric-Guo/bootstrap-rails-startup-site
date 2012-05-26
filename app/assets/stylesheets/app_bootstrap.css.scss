@@ -8,3 +8,10 @@ $gridGutterWidth: 10px;
 // import original bootstrap
 @import "bootstrap";
 @import "responsive";
+
+body {
+  padding-top: 56px;
+}
+.sidebar-nav {
+  padding: 8px 0;
+}

@@ -50,7 +50,26 @@
         </div>
       </div>
     </div>
-
+    <div class="container">
+      <div class="row">
+      <% if notice.present? %>
+        <div class="span8 offset2">
+        <div class="alert alert-info">
+          <button class="close" data-dismiss="alert">×</button>
+          <%= notice %>
+        </div>
+        </div>
+      <% end %>
+      <% if alert.present? %>
+        <div class="span8 offset2">
+        <div class="alert">
+          <button class="close" data-dismiss="alert">×</button>
+          <%= alert %>
+        </div>
+        </div>
+      <% end %>
+      </div><!--/row-->
+    </div><!--/.container-->
     <div class="container-fluid">
       <div class="row-fluid">
       <%= yield %>

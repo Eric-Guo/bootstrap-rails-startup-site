@@ -10,7 +10,10 @@ $gridGutterWidth: 10px;
 @import "responsive";
 
 body {
-  padding-top: 56px;
+  padding-top: 60px;
+  background-image: url('/assets/grid-18px-masked.png');
+  background-position: 0 40px;
+  background-repeat: repeat-x;
 }
 .sidebar-nav {
   padding: 8px 0;

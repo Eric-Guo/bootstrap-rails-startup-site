@@ -1,14 +1,15 @@
-<div class="hero-unit">
 <h2>Resend unlock instructions</h2>
 
-<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
-  <%= devise_error_messages! %>
+<%= simple_form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
+  <%= f.error_notification %>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <div class="inputs">
+    <%= f.input :email, :required => true %>
+  </div>
 
-  <div><%= f.submit "Resend unlock instructions" %></div>
+  <div class="actions">
+    <%= f.button :submit, "Resend unlock instructions" %>
+  </div>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
-</div>

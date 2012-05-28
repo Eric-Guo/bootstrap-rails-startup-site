@@ -10,6 +10,7 @@ gem 'win32console', :platforms => :mingw
 gem 'anjlab-bootstrap-rails', '>= 2.0', '< 3.0', :require => 'bootstrap-rails'
 gem 'bootstrap-will_paginate'
 gem 'devise'
+gem 'simple_form'
 
 
 # Gems used only for assets and not required

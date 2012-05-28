@@ -1,7 +1,6 @@
 == Welcome to use Bootstrap Rails Startup Site
 I created this startup site focus on the general enterprise internal website, which frontend code seldom to change, but logic/model changed frequently. I'm using Windows when develop rails, but I found most of the gems about Bootstrap theme need therubyracer Gems, so can not used if you develop Rails under Windows. So here is my solution :-)
 
-
 == The job which already do for you
 1. using Sass based Bootstrap template
 2. using ruby.taobao.org in Gemfile
@@ -10,6 +9,7 @@ I created this startup site focus on the general enterprise internal website, wh
 5. add developer document reference
 6. default Sublime Text 2 project
 7. Devise based authentication system
+8. simple_form style view for Devise
 
 == The job after you clone this site
 1. bundle install

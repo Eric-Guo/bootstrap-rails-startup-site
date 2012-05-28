@@ -8,6 +8,8 @@ gem 'rails', '3.2.3'
 gem 'sqlite3'
 gem 'win32console', :platforms => :mingw
 gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
+gem 'bootstrap-will_paginate'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

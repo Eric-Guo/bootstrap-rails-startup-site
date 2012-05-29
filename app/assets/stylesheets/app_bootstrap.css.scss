@@ -1,9 +1,5 @@
-// change colors
-$navbarBackground: #686868;
-
-// change grid
-$gridColumnWidth: 70px;
-$gridGutterWidth: 10px;
+@import "variables-united";
+@import "bootswatch-united";
 
 // import original bootstrap
 @import "bootstrap";

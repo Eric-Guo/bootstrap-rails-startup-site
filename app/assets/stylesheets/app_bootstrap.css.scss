@@ -2,8 +2,8 @@
 @import "bootswatch-united";
 
 // import original bootstrap
-@import "bootstrap";
-@import "responsive";
+@import "twitter/bootstrap";
+@import "twitter/bootstrap-responsive";
 
 @media (min-width: 980px) {
     body {

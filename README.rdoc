@@ -12,7 +12,7 @@ I created this startup site focus on the general enterprise internal website, wh
 
 == The job after you clone this site
 1. bundle install
-2. rake assets:precompile (this will give you very clean log out windows)
+2. rake assets:precompile (this will give you very clean log out windows, but it's optional, if you meet error, probably, you put the site to C driver instead of D or others)
 3. rails server
 
 == Welcome to Rails
@@ -174,9 +174,9 @@ The default directory structure of a generated Ruby on Rails application:
 
   |-- app
   |   |-- assets
-  |       |-- images
-  |       |-- javascripts
-  |       `-- stylesheets
+  |   |   |-- images
+  |   |   |-- javascripts
+  |   |   `-- stylesheets
   |   |-- controllers
   |   |-- helpers
   |   |-- mailers
@@ -190,6 +190,7 @@ The default directory structure of a generated Ruby on Rails application:
   |-- db
   |-- doc
   |-- lib
+  |   |-- assets
   |   `-- tasks
   |-- log
   |-- public
@@ -201,13 +202,12 @@ The default directory structure of a generated Ruby on Rails application:
   |   |-- performance
   |   `-- unit
   |-- tmp
-  |   |-- cache
-  |   |-- pids
-  |   |-- sessions
-  |   `-- sockets
+  |   `-- cache
+  |       `-- assets
   `-- vendor
       |-- assets
-          `-- stylesheets
+      |   |-- javascripts
+      |   `-- stylesheets
       `-- plugins
 
 app

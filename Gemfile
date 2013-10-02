@@ -7,7 +7,7 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 gem 'win32console', :platforms => :mingw
-gem 'anjlab-bootstrap-rails', '>= 2.0', :require => 'bootstrap-rails'
+gem 'anjlab-bootstrap-rails', '>= 2.0', '< 3.0', :require => 'bootstrap-rails'
 gem 'bootstrap-will_paginate'
 
 

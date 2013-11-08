@@ -3,7 +3,7 @@ GEM
   specs:
     actionmailer (4.0.1)
       actionpack (= 4.0.1)
-      mail (~> 2.5.3)
+      mail (~> 2.5.4)
     actionpack (4.0.1)
       activesupport (= 4.0.1)
       builder (~> 3.1.0)
@@ -17,7 +17,7 @@ GEM
       activemodel (= 4.0.1)
       activerecord-deprecated_finders (~> 1.0.2)
       activesupport (= 4.0.1)
-      arel (~> 4.0.1)
+      arel (~> 4.0.0)
     activerecord-deprecated_finders (1.0.3)
     activesupport (4.0.1)
       i18n (~> 0.6, >= 0.6.4)
@@ -35,7 +35,7 @@ GEM
     builder (3.1.4)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
-      railties (>= 4.0.1, < 5.0)
+      railties (>= 4.0.0, < 5.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -79,7 +79,7 @@ GEM
       json (~> 1.4)
     sass (3.2.12)
     sass-rails (4.0.1)
-      railties (>= 4.0.1.beta, < 5.0)
+      railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
     sdoc (0.3.20)
@@ -105,9 +105,9 @@ GEM
     turbolinks (1.3.0)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.2.1)
+    uglifier (2.3.0)
       execjs (>= 0.3.0)
-      multi_json (~> 1.0, >= 1.0.2)
+      json (>= 1.8.0)
     will_paginate (3.0.5)
     win32console (1.3.2-x86-mingw32)
 
@@ -117,11 +117,11 @@ PLATFORMS
 DEPENDENCIES
   anjlab-bootstrap-rails (>= 2.0, < 3.0)
   bootstrap-will_paginate
-  coffee-rails (~> 4.0.1)
+  coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.1)
-  sass-rails (~> 4.0.1)
+  sass-rails (~> 4.0.0)
   sdoc
   sqlite3
   turbolinks

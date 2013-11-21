@@ -69,7 +69,7 @@ $table-border-color:      #ddd; // table and cell border
 // Buttons
 // -------------------------
 $btn-default-bg:          $white;
-$btn-default-color:       darken($white, 10%);
+$btn-default-color:       darken($white, 90%);
 $btn-default-border:      darken($white, 20%);
 
 $btn-primary-bg:			    $link-color;
@@ -142,7 +142,7 @@ $navbar-default-color:             $white;
 $navbar-default-link-color:        $white;
 $navbar-default-link-hover-color:	 $white;
 $navbar-default-link-hover-bg:     transparent;
-$navbar-default-link-active-color: $navbar-default-link-hover-bg;
+$navbar-default-link-active-color: darken($navbar-default-link-hover-color, 30%);
 $navbar-default-link-active-bg:    $navbar-default-bg;
 
 $navbar-inverse-bg:                lighten($navbar-default-bg, 25%);

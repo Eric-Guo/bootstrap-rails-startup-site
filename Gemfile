@@ -45,5 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'win32console', :platforms => :mingw
-gem 'bootstrap-sass', '< 3.0'
+gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'

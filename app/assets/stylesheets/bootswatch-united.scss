@@ -6,7 +6,13 @@
 
 // TYPOGRAPHY
 // -----------------------------------------------------
-@import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@font-face {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  src: url("ubuntu400.woff");
+  format: "woff";
+}
 
 // NAVBAR
 // -----------------------------------------------------

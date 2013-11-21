@@ -16,14 +16,14 @@
 <body>
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <div class="container">
+          <a class="btn navbar-btn" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Project name</a>
           <div class="btn-group pull-right">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
               <i class="icon-user"></i> Username
@@ -35,7 +35,7 @@
               <li><a href="#">Sign Out</a></li>
             </ul>
           </div>
-          <div class="nav-collapse">
+          <div class="navbar-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -54,14 +54,14 @@
               </li>
 <% end %>
             </ul>
-          </div><!--/.nav-collapse -->
+          </div><!--/.navbar-collapse -->
         </div>
       </div>
     </div>
     <div class="container">
       <div class="row">
       <% if notice.present? %>
-        <div class="span8 offset2">
+        <div class="col-md-8 col-md-offset-2">
         <div class="alert alert-info">
           <button class="close" data-dismiss="alert">×</button>
           <%= notice %>
@@ -69,7 +69,7 @@
         </div>
       <% end %>
       <% if alert.present? %>
-        <div class="span8 offset2">
+        <div class="col-md-8 col-md-offset-2">
         <div class="alert">
           <button class="close" data-dismiss="alert">×</button>
           <%= alert %>
@@ -78,15 +78,15 @@
       <% end %>
       </div><!--/row-->
     </div><!--/.container-->
-    <div class="container-fluid">
-      <div class="row-fluid">
+    <div class="container">
+      <div class="row">
       <%= yield %>
       </div><!--/row-->
       <hr>
       <footer>
         <p>&copy; Company 2012</p>
       </footer>
-    </div><!--/.fluid-container-->
+    </div><!--/.container-->
 
 </body>
 </html>

@@ -25,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="/">Project name</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
@@ -49,15 +49,21 @@
 <% end %>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-              <i class="icon-user"></i> Username
-              <span class="caret"></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Profile</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Sign Out</a></li>
-            </ul>
+<% if user_signed_in? -%>
+            <li class="dropdown">
+            <%= link_to edit_user_registration_path, class: 'dropdown-toggle', data: { toggle: "dropdown" } do -%>
+<%= current_user.badge %><b class="caret"></b>
+            <% end -%>
+              <ul class="dropdown-menu">
+<li><%= link_to 'Profile', edit_user_registration_path %></li>
+<li class="divider"></li>
+<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+              </ul>
+            </li>
+<% else -%>
+<li><%= link_to 'Sign In', new_user_session_path, class: :active %></li>
+<li><%= link_to 'Register', new_user_registration_path, class: :active %></li>
+<% end -%>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

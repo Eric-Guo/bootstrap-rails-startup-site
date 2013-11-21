@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bootstrap Project Startup Site</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <style type="text/css">
-    body {padding-top: 80px;}
-    </style>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   <![endif]-->
 </head>
 <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn navbar-btn" data-toggle="collapse" data-target=".navbar-collapse">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
+          </button>
           <a class="navbar-brand" href="#">Project name</a>
-          <div class="btn-group pull-right">
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference Document <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+<li><a href="http://getbootstrap.com/getting-started" target="_black">Bootstrap reference</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Rails</li>
+<li><a href="http://guides.rubyonrails.org/" target="_black">Rails Guides</a></li>
+<li><a href="http://api.rubyonrails.org/" target="_black">Rails API</a></li>
+<li><a href="http://www.ruby-doc.org/core/" target="_black">Ruby core</a></li>
+<li><a href="http://www.ruby-doc.org/stdlib/" target="_black">Ruby standard library</a></li>
+<li><a href="http://apidock.com/rails" target="_black">Rails API dock</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
               <i class="icon-user"></i> Username
               <span class="caret"></span>
@@ -34,28 +56,8 @@
               <li class="divider"></li>
               <li><a href="#">Sign Out</a></li>
             </ul>
-          </div>
-          <div class="navbar-collapse">
-            <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-<% if Rails.env == 'development' and request.host == 'localhost' %>
-              <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Reference Document <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-<li><a href="http://guides.rubyonrails.org/" target="_black">Rails Guides</a></li>
-<li><a href="http://api.rubyonrails.org/" target="_black">Rails API</a></li>
-<li><a href="http://www.ruby-doc.org/core/" target="_black">Ruby core</a></li>
-<li><a href="http://www.ruby-doc.org/stdlib/" target="_black">Ruby standard library</a></li>
-<li><a href="http://apidock.com/rails" target="_black">Rails API dock</a></li>
-<li><a href="http://twitter.github.com/bootstrap/components.html" target="_black">Bootstrap reference</a></li>
-                </ul>
-              </li>
-<% end %>
-            </ul>
-          </div><!--/.navbar-collapse -->
-        </div>
+          </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
     <div class="container">
@@ -87,6 +89,5 @@
         <p>&copy; Company 2012</p>
       </footer>
     </div><!--/.container-->
-
 </body>
 </html>

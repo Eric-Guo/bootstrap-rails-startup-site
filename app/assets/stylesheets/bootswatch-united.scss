@@ -18,7 +18,7 @@
 		border-left: 1px solid #E6633A;
 
 		&:hover {
-			background-color: $linkColorHover;
+			background-color: $link-hover-color;
 		}
 	}
 
@@ -39,7 +39,7 @@
 	}
 
 	.navbar-search .search-query {
-		border: 1px solid darken($navbarBackground, 15%);
+		border: 1px solid darken($navbar-default-bg, 15%);
 	}
 
 	.navbar-collapse.in > .nav li > a {
@@ -48,7 +48,7 @@
 		border-right: 0px solid $orange;
 
 		&:hover {
-			background-color: $linkColorHover;
+			background-color: $link-hover-color;
 		}
 	}
 
@@ -74,7 +74,7 @@
 }
 
 .jumbotron {
-    border: 1px solid rgba(0,0,0,.05);
+  border: 1px solid rgba(0,0,0,.05);
 
 	h1 {
 		line-height: 1.6em;

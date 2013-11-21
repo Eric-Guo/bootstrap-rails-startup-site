@@ -34,7 +34,7 @@
             <li><a href="#contact">Contact</a></li>
 <% if Rails.env == 'development' and request.host == 'localhost' %>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reference <b class="caret"></b></a>
               <ul class="dropdown-menu">
 <li><a href="http://getbootstrap.com/getting-started" target="_black">Bootstrap reference</a></li>
                 <li class="divider"></li>
@@ -48,15 +48,17 @@
             </li>
 <% end %>
           </ul>
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-default">Sign in</button>
-          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+              <i class="icon-user"></i> Username
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li class="divider"></li>
+              <li><a href="#">Sign Out</a></li>
+            </ul>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -86,7 +88,7 @@
       </div><!--/row-->
       <hr>
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; Company 2014</p>
       </footer>
     </div><!--/.container-->
 </body>

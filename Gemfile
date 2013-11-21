@@ -45,5 +45,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'win32console', :platforms => :mingw
-gem 'anjlab-bootstrap-rails', '>= 2.0', '< 3.0', :require => 'bootstrap-rails'
+gem 'bootstrap-sass', '< 3.0'
 gem 'bootstrap-will_paginate'

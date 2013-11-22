@@ -11,11 +11,11 @@
 // Grays
 // -------------------------
 $black:                 #000;
-$grayDarker:            #222;
-$grayDark:              #333;
+$gray-darker:           #222;
+$gray-dark:             #333;
 $gray:                  #555;
-$grayLight:             #999;
-$grayLighter:           #F5F5F5;
+$gray-light:            #999;
+$gray-lighter:          #F5F5F5;
 $white:                 #fff;
 
 
@@ -34,7 +34,7 @@ $purple:                #772953;
 // Scaffolding
 // -------------------------
 $body-bg:				        $white;
-$text-color:            $grayDark;
+$text-color:            $gray-dark;
 
 
 // Links
@@ -87,13 +87,13 @@ $btn-warning-color:   		$orange;
 $btn-danger-bg:           #ee5f5b;
 $btn-danger-color:    		#bd362f;
 
-$btn-link-disabled-color: $grayDarker;
+$btn-link-disabled-color: $gray-darker;
 
 
 // Forms
 // -------------------------
 $input-bg:                $white;
-$input-bg-disabled:       $grayLighter;
+$input-bg-disabled:       $gray-lighter;
 $input-border:            #ccc;
 $input-border-radius:     3px;
 
@@ -105,8 +105,6 @@ $dropdown-border:               rgba(0,0,0,.2);
 $dropdown-link-color:           $link-color;
 $dropdown-link-hover-color:     $white;
 $dropdown-link-hover-bg:   			$link-color;
-
-
 
 
 // COMPONENT VARIABLES
@@ -126,19 +124,19 @@ $zindex-modal:             1050;
 
 
 // Input placeholder text color
-$input-color-placeholder: $grayLight;
+$input-color-placeholder: $gray-light;
 
 // Hr border color
-$hr-border:               $grayLighter;
+$hr-border:               $gray-lighter;
 
 
 // Navbar
 // -------------------------
 $navbar-height:                    40px;
+$navbar-default-color:             $white;
 $navbar-default-bg:                $orange;
 $navbar-default-border: 			     #CE4213;
 
-$navbar-default-color:             $white;
 $navbar-default-link-color:        $white;
 $navbar-default-link-hover-color:	 $white;
 $navbar-default-link-hover-bg:     transparent;
@@ -154,7 +152,7 @@ $navbar-inverse-brand-color:       $navbar-default-link-color;
 
 // Jumbotron unit
 // -------------------------
-$jumbotron-bg:			               $grayLighter;
+$jumbotron-bg:			               $gray-lighter;
 $jumbotron-heading-color:          inherit;
 $jumbotron-color:                  inherit;
 

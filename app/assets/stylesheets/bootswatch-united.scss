@@ -20,6 +20,7 @@
 .navbar {
 
 	.nav > li > a {
+		color: $white;
 		border-right: 1px solid #C03D14;
 		border-left: 1px solid #E6633A;
 
@@ -30,6 +31,7 @@
 
 	.nav .active > a,
 	.nav .active > a:hover {
+		color: $white;
 	  background-color: rgba(0,0,0,.2);
 	}
 

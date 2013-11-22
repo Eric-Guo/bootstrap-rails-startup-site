@@ -3,12 +3,12 @@ I created this startup site focus on the general enterprise internal website, wh
 
 
 == The job which already do for you
-1. using Sass based Bootstrap template
+1. using Sass based Bootstrap 3 template
 2. using ruby.taobao.org in Gemfile
 3. add win32console for more beautiful out in Windows
 4. config.assets.debug = false in config/environments/development.rb to focus function at first
 5. add developer document reference
-6. default Sublime Text 2 project
+6. default Sublime Text project
 
 == The job after you clone this site
 1. bundle install

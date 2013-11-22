@@ -20,44 +20,35 @@
 .navbar {
 
 	.nav > li > a {
-		color: $white;
 		border-right: 1px solid #C03D14;
 		border-left: 1px solid #E6633A;
-
-		&:hover {
-			background-color: $link-hover-color;
-		}
 	}
 
 	.nav .active > a,
 	.nav .active > a:hover {
-		color: $white;
 	  background-color: rgba(0,0,0,.2);
 	}
 
 	.divider-vertical {
-		background-color: inherit;
 		border-right: 0px solid #CE4213;
 	}
 
 	.navbar-text {
 		padding: 9px 10px 11px;
 		line-height: 19px;
-		color: $white;
 	}
 
 	.navbar-search .search-query {
 		border: 1px solid darken($navbar-default-bg, 15%);
 	}
 
+	.nav-pills > li > a {
+		background-color: whitesmoke;
+	}
+
 	.navbar-collapse.in > .nav li > a {
-		color: $white;
 		border-left: 0px solid $orange;
 		border-right: 0px solid $orange;
-
-		&:hover {
-			background-color: $link-hover-color;
-		}
 	}
 
 	.navbar-collapse.in .navbar-form,

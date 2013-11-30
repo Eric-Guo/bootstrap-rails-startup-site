@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree .
+//= stub html5shiv
+//= stub respond.min

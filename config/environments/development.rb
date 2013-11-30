@@ -25,5 +25,6 @@ PlForm::Application.configure do
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
+  config.assets.precompile += %w( html5shiv.js respond.min.js )
   config.assets.debug = true
 end

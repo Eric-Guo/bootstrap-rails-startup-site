@@ -1,6 +1,6 @@
 // Bootswatch.less
 // Swatch: United
-// Version: 2.0.3
+// United 3.0.2
 // -----------------------------------------------------
 @import "variables-united";
 
@@ -14,68 +14,28 @@
   format: "woff";
 }
 
-// NAVBAR
-// -----------------------------------------------------
+// Navbar =====================================================================
 
-.navbar {
+// Buttons ====================================================================
 
-	.nav > li > a {
-		border-right: 1px solid #C03D14;
-		border-left: 1px solid #E6633A;
-	}
+// Typography =================================================================
 
-	.nav .active > a,
-	.nav .active > a:hover {
-	  background-color: rgba(0,0,0,.2);
-	}
+// Tables =====================================================================
 
-	.divider-vertical {
-		border-right: 0px solid #CE4213;
-	}
+// Forms ======================================================================
 
-	.navbar-text {
-		padding: 9px 10px 11px;
-		line-height: 19px;
-	}
+// Navs =======================================================================
 
-	.navbar-search .search-query {
-		border: 1px solid darken($navbar-default-bg, 15%);
-	}
+.pagination {
 
-	.nav-pills > li > a {
-		background-color: whitesmoke;
-	}
-
-	.navbar-collapse.in > .nav li > a {
-		border-left: 0px solid $orange;
-		border-right: 0px solid $orange;
-	}
-
-	.navbar-collapse.in .navbar-form,
-	.navbar-collapse.in .navbar-search {
-		border-top: 0px solid $orange;
-		border-bottom: 0px solid $orange;
+	.active > a,
+	.active > a:hover {
+		border-color: #ddd;
 	}
 }
 
-// BUTTONS
-// -----------------------------------------------------
+// Indicators =================================================================
 
-// FORMS
-// -----------------------------------------------------
+// Progress bars ==============================================================
 
-
-// MISC
-// -----------------------------------------------------
-
-.alert {
-	text-shadow: none;
-}
-
-.jumbotron {
-  border: 1px solid rgba(0,0,0,.05);
-
-	h1 {
-		line-height: 1.6em;
-	}
-}
+// Containers =================================================================

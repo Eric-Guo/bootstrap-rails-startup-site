@@ -27,4 +27,7 @@ PlForm::Application.configure do
   # number of complex assets.
   config.assets.precompile += %w( html5shiv.js respond.min.js )
   config.assets.debug = false
+
+  # require by devise
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end

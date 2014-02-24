@@ -26,5 +26,5 @@ PlForm::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.precompile += %w( html5shiv.js respond.min.js )
-  config.assets.debug = true
+  config.assets.debug = false
 end

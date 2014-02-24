@@ -48,15 +48,23 @@
             </li>
 <% end %>
           </ul>
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-default">Sign in</button>
-          </form>
+          <ul class="nav navbar-nav navbar-right">
+<% if user_signed_in? -%>
+            <li class="dropdown">
+            <%= link_to edit_user_registration_path, class: 'dropdown-toggle', data: { toggle: "dropdown" } do -%>
+<%= current_user.badge %><b class="caret"></b>
+            <% end -%>
+              <ul class="dropdown-menu">
+<li><%= link_to 'Profile', edit_user_registration_path %></li>
+<li class="divider"></li>
+<li><%= link_to 'Logout', destroy_user_session_path, :method => :delete %></li>
+              </ul>
+            </li>
+<% else -%>
+<li><%= link_to 'Sign In', new_user_session_path, class: :active %></li>
+<li><%= link_to 'Register', new_user_registration_path, class: :active %></li>
+<% end -%>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>

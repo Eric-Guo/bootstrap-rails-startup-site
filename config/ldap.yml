@@ -19,7 +19,7 @@ authorizations: &AUTHORIZATIONS
     authorizationRole: postsAdmin
   host: cvpcdcip83.sdcorp.global.sandisk.com
   port: 389
-  attribute: mail
+  attribute: employeeid
   base: "DC=sdcorp,DC=global,DC=sandisk,DC=com"
   admin_user: "MES Service"
   admin_password: ""

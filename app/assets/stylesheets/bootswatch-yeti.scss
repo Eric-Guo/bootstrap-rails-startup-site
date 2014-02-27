@@ -1,0 +1,200 @@
+// Yeti 3.1.1
+// Bootswatch
+// -----------------------------------------------------
+
+// Navbar =====================================================================
+
+.navbar {
+  border: none;
+  font-size: 13px;
+  font-weight: 300;
+
+  .navbar-toggle:hover .icon-bar {
+    background-color: #b3b3b3;
+  }
+}
+
+// Buttons ====================================================================
+
+.btn {
+  padding: 14px 28px;
+}
+
+.btn-group {
+
+  .btn ~ .dropdown-toggle {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .dropdown-menu {
+    border-top-width: 0;
+  }
+}
+
+// Typography =================================================================
+
+.lead {
+  color: #6f6f6f;;
+}
+
+cite {
+  font-style: italic;
+}
+
+blockquote {
+  border-left-width: 1px;
+  color: #6f6f6f;;
+
+  small {
+    font-size: font-size;
+    font-weight: 300;
+  }
+}
+
+// Tables =====================================================================
+
+table {
+  font-size: 12px;
+}
+
+// Forms ======================================================================
+
+input,
+.form-control {
+  padding: 7px;
+  font-size: 12px;
+}
+
+label,
+.control-label,
+.help-block,
+.checkbox,
+.radio {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.form-group .btn,
+.input-group-addon,
+.input-group-btn .btn {
+  padding: 8px 14px;
+  font-size: 12px;
+}
+
+// Navs =======================================================================
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+.nav-tabs {
+  > li > a {
+    background-color: #e7e7e7;
+    color: lighten(#000, 13.5%);
+  }
+
+  .caret {
+    border-top-color: lighten(#000, 13.5%);
+    border-bottom-color: lighten(#000, 13.5%);
+  }
+}
+
+.nav-pills {
+  font-weight: 300;
+}
+
+.breadcrumb {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.pagination {
+  font-size: 12px;
+  font-weight: 300;
+  color: lighten(#000, 60%);
+
+  > li {
+    > a,
+    > span {
+      margin-left: 4px;
+      color: lighten(#000, 60%);
+    }
+  }
+
+  > .active {
+    > a,
+    > span {
+      color: #fff;
+    }
+  }
+
+  > li,
+  > li:first-child,
+  > li:last-child {
+    > a,
+    > span {
+      border-radius: 3px;
+    }
+  }
+}
+
+.pager {
+  font-size: 12px;
+  font-weight: 300;
+  color: lighten(#000, 60%);
+}
+
+.list-group {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+// Indicators =================================================================
+
+.alert {
+  font-size: 12px;
+  font-weight: 300;
+
+  a,
+  .alert-link {
+    font-weight: normal;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+
+.label {
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 0;
+  font-weight: 300;
+}
+
+.badge {
+  font-weight: 300;
+}
+
+// Progress bars ==============================================================
+
+.progress {
+  height: 22px;
+  padding: 2px;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+}
+
+// Containers =================================================================
+
+.popover {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+}

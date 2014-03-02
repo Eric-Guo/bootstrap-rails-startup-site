@@ -1,34 +1,31 @@
-<h3>The <%= plural_table_name %> records</h3>
+<h3>Listing <%= plural_table_name %></h3>
 
-<table class="table table-bordered">
-  <thread>
-  <colgroup>
-<% attributes.each do |attribute| -%>
-    <col />
+<table>
+  <thead>
+    <tr>
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+      <th><%= attribute.human_name %></th>
 <% end -%>
-    <col class="actions" />
-  </colgroup>
-  <tr>
-<% attributes.each do |attribute| -%>
-    <th><%= attribute.human_name %></th>
-<% end -%>
-    <th>Actions</th>
-  </tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
   </thead>
+
   <tbody>
-<%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
-  <tr>
-<% attributes.each do |attribute| -%>
-    <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
+    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+      <tr>
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+        <td><%%= <%= singular_table_name %>.<%= attribute.name %> %></td>
 <% end -%>
-    <td><%%= link_to 'Show', <%= singular_table_name %> %></td>
-    <td><%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></td>
-    <td><%%= link_to 'Destroy', <%= singular_table_name %>, <%= key_value :confirm, "'Are you sure?'" %>, <%= key_value :method, ":delete" %> %></td>
-  </tr>
-<%% end %>
+        <td><%%= link_to 'Show', <%= singular_table_name %> %></td>
+        <td><%%= link_to 'Edit', edit_<%= singular_table_name %>_path(<%= singular_table_name %>) %></td>
+        <td><%%= link_to 'Destroy', <%= singular_table_name %>, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <%% end %>
   </tbody>
 </table>
 <%%= will_paginate @<%= plural_table_name %> %>
-<br />
+<br>
 
-<%%= link_to 'Input <%= human_name %>', new_<%= singular_table_name %>_path, :class => 'btn btn-primary' %>
+<%%= link_to 'New <%= human_name %>', new_<%= singular_table_name %>_path %>

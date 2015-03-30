@@ -2,7 +2,8 @@ PlForm::Application.routes.draw do
   devise_for :users
   get "home/index"
   root :to => 'home#index'
-  post 'stay_time' => 'home#stay_time'
+  post 'stay_time' => 'home#record_stay_time'
+  get 'stay_time' => 'home#stay_time'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

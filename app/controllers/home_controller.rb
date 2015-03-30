@@ -5,10 +5,10 @@ class HomeController < ApplicationController
   	else
   		@greeting = "你好，陌生人！你没有登陆，或者你还没有注册，但是你已经浏览这个页面#{stay_minutes @stranger}分钟了。"
   	end
-  	@stat = "现在总共有#{User.where('updated_at > ?', 3.minutes.ago).size}个注册用户在查看这个网站，有#{Stranger.where('updated_at > ?', 3.minutes.ago).size}个陌生人在查看这个网站。"
+  	@stat = "现在总共有#{total_user_online_number}个注册用户在查看这个网站，有#{total_stranger_online_number}个陌生人在查看这个网站。"
   end
 
-  def stay_time
+  def record_stay_time
     stay_sec = params[:stay_seconds].to_i
   	if current_user.present?
   		current_user.stay_seconds += stay_sec
@@ -22,5 +22,9 @@ class HomeController < ApplicationController
     respond_to do |format|
         format.json { head :no_content }
     end
+  end
+
+  def stay_time
+
   end
 end

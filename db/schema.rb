@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330141141) do
+ActiveRecord::Schema.define(version: 20150330143448) do
 
   create_table "strangers", force: true do |t|
     t.string   "session_id"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150330141141) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "stay_seconds",           default: 0,  null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

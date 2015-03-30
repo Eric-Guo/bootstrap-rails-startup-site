@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include ApplicationHelper
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -7,7 +8,8 @@ class ApplicationController < ActionController::Base
 
   def initial_or_add_stay_time
   	if current_user.present?
-
+  		current_user.stay_seconds += 1
+  		current_user.save
   	else
   		@stranger = Stranger.find_or_create_by(session_id: session['session_id'])
   		@stranger.stay_seconds += 1

@@ -5,6 +5,6 @@ class HomeController < ApplicationController
   	else
   		@greeting = "你好，陌生人！你没有登陆，或者你还没有注册，但是你已经浏览这个页面#{stay_minutes @stranger}分钟了。"
   	end
-  	@stat = "现在总共有#{User.all.size}个注册用户在查看这个网站，有#{Stranger.where(updated_at: 5.minutes.ago).size}个陌生人在查看这个网站。"
+  	@stat = "现在总共有#{User.where('updated_at > ?', 3.minutes.ago).size}个注册用户在查看这个网站，有#{Stranger.where('updated_at > ?', 3.minutes.ago).size}个陌生人在查看这个网站。"
   end
 end

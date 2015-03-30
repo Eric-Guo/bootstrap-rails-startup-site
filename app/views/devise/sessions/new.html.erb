@@ -2,8 +2,8 @@
 <h2>Sign in</h2>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :badge %><br />
-  <%= f.text_field :badge, :autofocus => true %></div>
+  <div><%= f.label :name %><br />
+  <%= f.text_field :name, :autofocus => true %></div>
 
   <div><%= f.label :password %><br />
   <%= f.password_field :password %></div>

@@ -7,4 +7,20 @@ class HomeController < ApplicationController
   	end
   	@stat = "现在总共有#{User.where('updated_at > ?', 3.minutes.ago).size}个注册用户在查看这个网站，有#{Stranger.where('updated_at > ?', 3.minutes.ago).size}个陌生人在查看这个网站。"
   end
+
+  def stay_time
+    stay_sec = params[:stay_seconds].to_i
+  	if current_user.present?
+  		current_user.stay_seconds += stay_sec
+  		current_user.save
+  	else
+  		@stranger = Stranger.find_or_create_by(session_id: session['session_id'])
+  		@stranger.stay_seconds += stay_sec
+  		@stranger.save
+  	end
+
+    respond_to do |format|
+        format.json { head :no_content }
+    end
+  end
 end

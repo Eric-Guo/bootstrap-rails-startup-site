@@ -48,3 +48,5 @@ gem 'win32console', :platforms => :mingw
 gem 'bootstrap-sass'
 gem 'bootstrap-will_paginate'
 gem 'devise'
+
+gem 'puma', group: :development

@@ -1,8 +1,6 @@
-// Bootswatch.less
-// Swatch: United
-// United 3.0.2
+// United 3.2.0
+// Bootswatch
 // -----------------------------------------------------
-@import "variables-united";
 
 // TYPOGRAPHY
 // -----------------------------------------------------
@@ -10,11 +8,26 @@
   font-family: 'Ubuntu';
   font-style: normal;
   font-weight: 400;
-  src: url("ubuntu400.woff");
-  format: "woff";
+  src: font-url("ubuntu400.woff");
 }
 
 // Navbar =====================================================================
+
+.navbar-default {
+
+  .badge {
+    background-color: #fff;
+    color: #DD4814;
+  }
+}
+
+.navbar-inverse {
+
+  .badge {
+    background-color: #fff;
+    color: #772953;
+  }
+}
 
 // Buttons ====================================================================
 

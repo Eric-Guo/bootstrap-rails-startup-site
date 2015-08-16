@@ -18,6 +18,7 @@
 <table class="table table-bordered">
   <thead>
     <tr>
+      <th>Suite Name</th>
       <th>Case Name</th>
       <th>Description</th>
       <th>Tester</th>
@@ -27,6 +28,15 @@
   <tbody>
     <% @project.cases.each do |c| -%>
       <tr>
+        <td></td>
+        <td><%= c.case_name %></td>
+        <td><%= c.description %></td>
+        <td><%= c.tester_user.badge %></td>
+      </tr>
+    <% end -%>
+    <% @project.suites_cases.each do |c| -%>
+      <tr>
+        <td><%= c.suite.suite_name %></td>
         <td><%= c.case_name %></td>
         <td><%= c.description %></td>
         <td><%= c.tester_user.badge %></td>

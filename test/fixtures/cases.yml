@@ -11,3 +11,13 @@ one_two:
   case_name: Sign out
   description: Sign out
   tester_user_id: 1
+
+suite_one_one:
+  suite_id: 1
+  case_name: Buy Bike - Finding Bike
+  tester_user_id: 1
+
+suite_one_two:
+  suite_id: 1
+  case_name: Buy Bike - Buy Bike
+  tester_user_id: 1

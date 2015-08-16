@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150816053405) do
+ActiveRecord::Schema.define(version: 20150816055039) do
 
   create_table "cases", force: true do |t|
     t.integer  "project_id"
+    t.integer  "suite_id"
     t.string   "case_name"
     t.string   "description"
     t.integer  "tester_user_id"
@@ -23,6 +24,7 @@ ActiveRecord::Schema.define(version: 20150816053405) do
   end
 
   add_index "cases", ["project_id"], name: "index_cases_on_project_id"
+  add_index "cases", ["suite_id"], name: "index_cases_on_suite_id"
   add_index "cases", ["tester_user_id"], name: "index_cases_on_tester_user_id"
 
   create_table "projects", force: true do |t|
@@ -32,6 +34,16 @@ ActiveRecord::Schema.define(version: 20150816053405) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "suites", force: true do |t|
+    t.integer  "project_id"
+    t.string   "suite_name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "suites", ["project_id"], name: "index_suites_on_project_id"
 
   create_table "users", force: true do |t|
     t.string   "badge",                  default: "", null: false

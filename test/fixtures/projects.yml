@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_name: Testing shop new login page
+  description: used for testing purpose
+  start_date: 2015-08-16 13:02:22
+
+two:
+  project_name: Learning phantomjs tools
+  description: in order to accelerate the testing in automation way.
+  start_date: 2015-08-16 13:02:22

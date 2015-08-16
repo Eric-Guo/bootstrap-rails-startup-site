@@ -1,23 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Project:</strong>
-  <%= @suite.project %>
-</p>
-
-<p>
   <strong>Suite name:</strong>
   <%= @suite.suite_name %>
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @suite.description %>
+  <strong>Belongs to Project:</strong>
+  <%= @suite.project %>
 </p>
 
 <p>
-  <strong>Case:</strong>
-  <%= @suite.case %>
+  <strong>Description:</strong>
+  <%= @suite.description %>
 </p>
 
 <%= link_to 'Edit', edit_suite_path(@suite) %> |

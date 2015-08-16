@@ -25,7 +25,7 @@ class SuitesController < ApplicationController
     @suite = Suite.new(suite_params)
 
     if @suite.save
-      redirect_to @suite, notice: 'Suite was successfully created.'
+      redirect_to @suite.project, alert: 'Suite was successfully created.'
     else
       render action: 'new'
     end

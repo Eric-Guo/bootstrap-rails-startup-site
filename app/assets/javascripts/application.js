@@ -16,3 +16,6 @@
 //= require_tree .
 //= stub html5shiv
 //= stub respond.min
+$(document).ready(function() {
+	$('#myModal').modal();
+});

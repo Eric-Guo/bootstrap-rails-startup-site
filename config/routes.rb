@@ -1,9 +1,11 @@
 PlForm::Application.routes.draw do
+  resources :cases
+
   resources :projects
 
   devise_for :users
   get "home/index"
-  root :to => 'home#index'
+  root :to => 'projects#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

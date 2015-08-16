@@ -15,5 +15,26 @@
   <%= @project.start_date %>
 </p>
 
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Case Name</th>
+      <th>Description</th>
+      <th>Tester</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project.cases.each do |c| -%>
+      <tr>
+        <td><%= c.case_name %></td>
+        <td><%= c.description %></td>
+        <td><%= c.tester_user.badge %></td>
+      </tr>
+    <% end -%>
+  </tbody>
+</table>
+
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

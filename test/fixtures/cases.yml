@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one_one:
+  project_id: 1
+  case_name: Sign in
+  description: Sign in using user name and password
+  tester_user_id: 1
+
+one_two:
+  project_id: 1
+  case_name: Sign out
+  description: Sign out
+  tester_user_id: 1

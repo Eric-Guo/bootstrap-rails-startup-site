@@ -5,11 +5,13 @@
 # below each fixture, per the syntax in the comments below
 #
 eric:
+ id: 1
  badge: 6749
  email: eric.guocz@gmail.com
- encrypted_password: $2a$10$MT1GWbE4S7zaQJytcrox.uNBApHf7.Tt4PCwSsGe4qP5GNYj8os7q
+ encrypted_password: "$2a$10$bd6tXfR3lS7t6Lx/Uwf4FuvjjeC0rb0PumNGkV4gMF3.p0bWEd5/O"
 
 mes_service:
+ id: 2
  badge: mes.service
  encrypted_password: $2a$10$ZQYxSWPIRYUQgUO5A.ax.uyirH6GbR7OCu/kWJflrIKBkTg0bmoh2
 

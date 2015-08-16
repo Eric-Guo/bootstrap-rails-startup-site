@@ -1,0 +1,33 @@
+<h3>Listing cases</h3>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Case name</th>
+      <th>Description</th>
+      <th>Tester user</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cases.each do |case| %>
+      <tr>
+        <td><%= case.project %></td>
+        <td><%= case.case_name %></td>
+        <td><%= case.description %></td>
+        <td><%= case.tester_user %></td>
+        <td><%= link_to 'Show', case %></td>
+        <td><%= link_to 'Edit', edit_case_path(case) %></td>
+        <td><%= link_to 'Destroy', case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @cases %>
+<br>
+
+<%= link_to 'New Case', new_case_path %>

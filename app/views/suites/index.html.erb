@@ -1,0 +1,33 @@
+<h3>Listing suites</h3>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Project</th>
+      <th>Suite name</th>
+      <th>Description</th>
+      <th>Case</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @suites.each do |suite| %>
+      <tr>
+        <td><%= suite.project %></td>
+        <td><%= suite.suite_name %></td>
+        <td><%= suite.description %></td>
+        <td><%= suite.case %></td>
+        <td><%= link_to 'Show', suite %></td>
+        <td><%= link_to 'Edit', edit_suite_path(suite) %></td>
+        <td><%= link_to 'Destroy', suite, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @suites %>
+<br>
+
+<%= link_to 'New Suite', new_suite_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one_suite_one:
+  project_id: 2
+  suite_name: Buy Bike
+  description: User by bike in shop
+  tester_user_id: 1
+
+one_suite_two:
+  project_id: 2
+  suite_name: Refund Bike
+  description: Refund just buy bike
+  tester_user_id: 1

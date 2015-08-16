@@ -1,4 +1,6 @@
 PlForm::Application.routes.draw do
+  resources :suites
+
   resources :cases
 
   resources :projects

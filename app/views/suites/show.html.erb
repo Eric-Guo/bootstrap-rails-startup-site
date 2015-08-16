@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @suite.project %>
+</p>
+
+<p>
+  <strong>Suite name:</strong>
+  <%= @suite.suite_name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @suite.description %>
+</p>
+
+<p>
+  <strong>Case:</strong>
+  <%= @suite.case %>
+</p>
+
+<%= link_to 'Edit', edit_suite_path(@suite) %> |
+<%= link_to 'Back', suites_path %>

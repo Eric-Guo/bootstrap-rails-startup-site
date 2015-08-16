@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1
   def show
+    @new_suite = Suite.new(project_id: @project.id)# @project.suites.build
   end
 
   # GET /projects/new

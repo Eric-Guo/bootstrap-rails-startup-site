@@ -34,16 +34,42 @@
         <td><%= c.tester_user.badge %></td>
       </tr>
     <% end -%>
-    <% @project.suites_cases.each do |c| -%>
-      <tr>
-        <td><%= c.suite.suite_name %></td>
-        <td><%= c.case_name %></td>
-        <td><%= c.description %></td>
-        <td><%= c.tester_user.badge %></td>
-      </tr>
+    <% @project.suites.each do |suite| -%>
+      <% if suite.present? && suite.cases.blank? -%>
+        <tr>
+          <td><%= suite.suite_name %></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      <% end %>
+      <% suite.cases do |c| %>
+        <tr>
+          <td><%= suite.suite_name %></td>
+          <td><%= c.case_name %></td>
+          <td><%= c.description %></td>
+          <td><%= c.tester_user.badge %></td>
+        </tr>
+      <% end -%>
     <% end -%>
   </tbody>
 </table>
+
+<%= form_for(@new_suite) do |f| %>
+  <%= f.hidden_field :project_id -%>
+  <div class="field">
+    <%= f.label :suite_name %><br>
+    <%= f.text_field :suite_name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
 
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
